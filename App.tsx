@@ -114,7 +114,7 @@ const App: React.FC = () => {
           {image && (
             <button 
               onClick={() => setIsLocked(!isLocked)}
-              className={`pointer-events-auto flex items-center justify-center w-10 h-10 rounded-full backdrop-blur-md border border-white/20 transition-all shadow-xl ${isLocked ? 'bg-red-500/80' : 'bg-white/10 hover:bg-white/20'}`}
+              className={`pointer-events-auto flex items-center justify-center w-10 h-10 rounded-full backdrop-blur-md border border-white/20 transition-all shadow-xl ${isLocked ? 'bg-white text-black' : 'bg-white/10 hover:bg-white/20'}`}
             >
               {isLocked ? <Lock size={20} /> : <Unlock size={20} />}
             </button>
@@ -169,7 +169,7 @@ const App: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-6 z-50">
           <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-3xl max-w-md w-full shadow-2xl">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 rotate-3">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center shadow-lg shadow-white/5 rotate-3 border border-white/20">
                 <Camera className="text-white" size={32} />
               </div>
             </div>
@@ -180,7 +180,7 @@ const App: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="bg-neutral-800 p-2 rounded-lg">
-                  <Upload size={20} className="text-blue-400" />
+                  <Upload size={20} className="text-neutral-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">Upload & Align</h3>
@@ -189,7 +189,7 @@ const App: React.FC = () => {
               </div>
               <div className="flex items-start gap-4">
                 <div className="bg-neutral-800 p-2 rounded-lg">
-                  <Layers size={20} className="text-purple-400" />
+                  <Layers size={20} className="text-neutral-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">Outline Mode</h3>
@@ -198,7 +198,7 @@ const App: React.FC = () => {
               </div>
               <div className="flex items-start gap-4">
                 <div className="bg-neutral-800 p-2 rounded-lg">
-                  <Lock size={20} className="text-green-400" />
+                  <Lock size={20} className="text-neutral-400" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">Lock Transform</h3>
@@ -211,7 +211,7 @@ const App: React.FC = () => {
                 localStorage.setItem('tracevision-has-visited', 'true');
                 triggerUpload();
               }}
-              className="w-full mt-8 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all"
+              className="w-full mt-8 bg-white hover:bg-neutral-200 text-black font-bold py-4 rounded-xl transition-all"
             >
               Get Started
             </button>
