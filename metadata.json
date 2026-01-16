@@ -1,0 +1,7 @@
+{
+  "name": "TraceVision AR",
+  "description": "A professional AR drawing assistant that overlays images on your camera feed with adjustable opacity and outline detection to help you trace and draw on physical surfaces.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
